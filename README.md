@@ -6,6 +6,8 @@ QuoteApp is a full-stack application for managing authors, books, and their resp
 - **Backend**: A RESTful API built with Django that serves author details, books, and quotes data.
 - **Database**: PostgreSQL for storing author, book, and quote information.
 
+# Preview
+![Preview](ui.gif)
 ## Project Structure
 
 The project consists of two main directories:
