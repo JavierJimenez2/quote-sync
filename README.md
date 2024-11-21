@@ -33,6 +33,15 @@ The frontend is developed using Vue 3 and Vuetify, with dynamic routing and stat
 - **`vue3-apexcharts`**: For displaying charts, if needed.
 - **PrimeVue**: Used for rich UI elements.
 
+## Docker Setup
+
+This project also includes Docker support. You can use Docker Compose and Dockerfile to set up and run the application in a containerized environment.
+
+To start the application using Docker Compose, run:
+```bash
+docker-compose up --build
+```
+
 ### How to Run the Frontend
 
 1. Navigate to the `quotesync-frontend` directory:
@@ -108,7 +117,8 @@ API_URL=http://localhost:8000/api
 - **Frontend**: Vue 3, Vuetify, Pinia, Axios, Vue Router
 - **Backend**: Django, Django Rest Framework (DRF)
 - **Styling**: Vuetify, PrimeVue, GridJS
-- **Charts**: Vue3-ApexCharts
+
+
 
 ## License
 
