@@ -3,3 +3,5 @@ djangorestframework==3.14.0
 django-cors-headers==3.8.0
 channels==4.0.0
 python-dotenv==0.19.1
+psycopg2-binary==2.9.1
+django-environ==0.11.2

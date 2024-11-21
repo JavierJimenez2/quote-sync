@@ -13,9 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire project
 COPY . .
 
-# Copy the database file
-COPY db.sqlite3 /app/db.sqlite3
-
 # Define the port to replace in the .env file
 ARG FRONTEND_PORT=5173
 

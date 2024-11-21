@@ -13,7 +13,9 @@ services:
       - .env
     volumes:
       - ./quotesync-backend:/app
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     depends_on:
+      - db
       - frontend
     networks:
       - app-network
@@ -29,11 +31,21 @@ services:
     command: ["sh", "-c", "npm install && npm run dev -- --host 0.0.0.0"]
     networks:
       - app-network
-    # healthcheck:
-    #   test: ["CMD", "curl", "-f", "http://localhost:5173"]
-    #   interval: 30s
-    #   retries: 3
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: quotesync
+      POSTGRES_PASSWORD: dublin2024
+      POSTGRES_DB: quotesync
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-network
 
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  db_data:
