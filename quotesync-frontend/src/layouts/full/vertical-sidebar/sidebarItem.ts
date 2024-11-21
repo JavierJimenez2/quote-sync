@@ -1,6 +1,6 @@
 import {
   UserIcon,
-  BooksIcon,
+  // BooksIcon,
   LicenseIcon
 } from 'vue-tabler-icons';
 
@@ -31,21 +31,21 @@ const sidebarItem: menu[] = [
     icon: UserIcon,
     to: '/authors'
   },
-  {
-    title: 'Books',
-    icon: BooksIcon,
-    to: '/books'
-  },
-  {
-    title: 'Tags',
-    icon: BooksIcon,
-    to: '/tags'
-  },
-  {
-    title: 'Test',
-    icon: BooksIcon,
-    to: '/starter'
-  },
+  // {
+  //   title: 'Books',
+  //   icon: BooksIcon,
+  //   to: '/books'
+  // },
+  // {
+  //   title: 'Tags',
+  //   icon: BooksIcon,
+  //   to: '/tags'
+  // },
+  // {
+  //   title: 'Test',
+  //   icon: BooksIcon,
+  //   to: '/starter'
+  // },
   
 
 ];
