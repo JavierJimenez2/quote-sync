@@ -1,6 +1,6 @@
 # QuoteSync
 
-QuoteApp is a full-stack application for managing authors, books, and their respective quotes. The project is divided into two main parts:
+QuoteApp is a full-stack application for managing authors, books, and their respective quotes. The project is divided into three main parts:
 
 - **Frontend**: Built using Vue.js with Vuetify and other libraries for smooth UI/UX.
 - **Backend**: A RESTful API built with Django that serves author details, books, and quotes data.
