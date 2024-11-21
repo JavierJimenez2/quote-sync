@@ -2,10 +2,15 @@ import { fileURLToPath, URL } from 'url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vuetify from 'vite-plugin-vuetify';
+import dotenv from 'dotenv';
 
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: Number(dotenv.config().parsed?.PORT) || 5173,
+    host: true, // Esto permite conexiones externas (0.0.0.0)
+  },  
   plugins: [
     vue({
       template: {

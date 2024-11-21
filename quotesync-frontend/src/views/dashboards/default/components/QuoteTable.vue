@@ -336,7 +336,7 @@ const saveQuote = async () => {
                         </div>
                     </template> -->
                     <template #empty> Not found. </template>
-                    <template #loading> Loading customers data. Please wait. </template>
+                    <template #loading> Loading data. Please wait. </template>
                     <template #paginatorstart>
                         <Button type="button" text @click="fetchQuotes">
                             <RefreshDotIcon />

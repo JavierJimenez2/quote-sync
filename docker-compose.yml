@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./quotesync-backend
+      dockerfile: Dockerfile
+      args:
+        FRONTEND_PORT: 5173
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./quotesync-backend:/app
+    depends_on:
+      - frontend
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./quotesync-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./quotesync-frontend:/app
+    command: ["sh", "-c", "npm install && npm run dev -- --host 0.0.0.0"]
+    networks:
+      - app-network
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:5173"]
+    #   interval: 30s
+    #   retries: 3
+
+networks:
+  app-network:
+    driver: bridge

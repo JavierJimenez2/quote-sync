@@ -148,7 +148,33 @@ const addTXTFile = (event: Event) => {
   <v-row>
     <v-col cols="12" md="12">
       <UiParentCard title="Quotes Table">
-        
+        <DataTable :value="quotes" paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]"
+          tableStyle="min-width: 50rem"
+          paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
+          currentPageReportTemplate="{first} to {last} of {totalRecords}"
+          >
+          <!-- Botones de paginación -->
+          <template #paginatorstart>
+            <Button type="button" text @click="fetchQuotes">
+              <RefreshDotIcon />
+            </Button>
+          </template>
+          <template #paginatorend>
+            <input type="file" accept=".txt" @change="addTXTFile" style="display: none" ref="txtFileInput" />
+            <Button type="button" text @click="$refs.txtFileInput.click()">
+              <UploadIcon />
+            </Button>
+            <Button type="button" text @click="downloadCSV">
+              <DownloadIcon />
+            </Button>
+          </template>
+
+          <!-- Columnas de la tabla -->
+          <Column field="author" header="Author" style="width: 25%" />
+          <Column field="book" header="Book" style="width: 25%" />
+          <Column field="tags" header="Tags" style="width: 25%" />
+          <Column field="body" header="Quote" style="width: 25%" />
+        </DataTable>
       </UiParentCard>
       <v-snackbar v-model="snackbar" :color="snackbarColor" timeout="3000">
         {{ snackbarMessage }}
