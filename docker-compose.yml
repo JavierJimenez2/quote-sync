@@ -6,7 +6,7 @@ services:
       context: ./quotesync-backend
       dockerfile: Dockerfile
       args:
-        FRONTEND_PORT: 5173
+        FRONTEND_PORT: $FRONTEND_PORT
     ports:
       - "8000:8000"
     env_file:
@@ -35,9 +35,9 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: quotesync
-      POSTGRES_PASSWORD: dublin2024
-      POSTGRES_DB: quotesync
+      POSTGRES_USER: $POSTGRES_USER
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      POSTGRES_DB: $POSTGRES_DB
     volumes:
       - db_data:/var/lib/postgresql/data
     networks:

@@ -4,6 +4,7 @@ QuoteApp is a full-stack application for managing authors, books, and their resp
 
 - **Frontend**: Built using Vue.js with Vuetify and other libraries for smooth UI/UX.
 - **Backend**: A RESTful API built with Django that serves author details, books, and quotes data.
+- **Database**: PostgreSQL for storing author, book, and quote information.
 
 ## Project Structure
 
@@ -63,7 +64,8 @@ docker-compose up --build
 
 ## Backend Details
 
-The backend is a Django-based RESTful API that serves author data (including books and quotes). It fetches this data from a mock data source (or a database if implemented) and serves it to the frontend.
+The backend is a Django-based RESTful API that serves author data (including books and quotes). The API endpoints are used by the frontend to fetch and display author information.
+The database is PostgreSQL, which stores author, book, and quote data.
 
 ### How to Run the Backend
 
@@ -116,7 +118,7 @@ API_URL=http://localhost:8000/api
 
 - **Frontend**: Vue 3, Vuetify, Pinia, Axios, Vue Router
 - **Backend**: Django, Django Rest Framework (DRF)
-- **Styling**: Vuetify, PrimeVue, GridJS
+- **Styling**: Vuetify, PrimeVue
 
 
 
