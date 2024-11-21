@@ -113,6 +113,3 @@ API_URL=http://localhost:8000/api
 ## License
 
 This project is licensed under the MIT License.
-```
-
-This updated `README.md` now correctly reflects that the backend is built using Django and includes the proper instructions for setting up and running the Django backend.
