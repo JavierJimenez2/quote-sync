@@ -21,7 +21,7 @@ const quotes = ref<Quote[]>([]);
 const data = ref({});
 
 const breadcrumbs = shallowRef([
-  { title: 'Authors', disabled: false, href: '/authors' },
+  { title: 'Authors', disabled: false, href: '#' },
   { title: "Author", disabled: true, href: '#' }
 ]);
 const route = useRoute();

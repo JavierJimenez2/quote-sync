@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 # Install dependencies (make sure the node_modules are properly installed)
 # RUN rm -rf node_modules && npm install
-RUN npm install --no-optional && npm install rollup @rollup/plugin-commonjs @rollup/plugin-node-resolve --save-dev
+RUN npm install && npm install rollup @rollup/plugin-commonjs @rollup/plugin-node-resolve --save-dev
 
 # Copy the project files
 COPY . .
