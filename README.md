@@ -122,6 +122,25 @@ API_URL=http://localhost:8000/api
 - **Backend**: Django, Django Rest Framework (DRF)
 - **Styling**: Vuetify, PrimeVue
 
+## Features to Introduce
+
+- [ ] **Caching with Redis**: Implement caching to enhance application performance and reduce database queries.  
+- [ ] **User Authentication**: Add secure authentication for users to manage their personalized experience.  
+- [ ] **Import Notes**: Allow importing notes from Google Documents and Google Play Books.  
+- [ ] **AI-Generated Tags**: Automatically generate tags for quotes using AI-based algorithms.  
+- [ ] **Author Information**: Scrape and display data about authors, including a short biography.  
+- [ ] **Favorite Quotes List**: Enable users to create and manage a favorite list of quotes.  
+- [ ] **Quote Playlists**: Allow users to create "playlists" of quotes for thematic or curated collections.  
+- [ ] **User Collaboration**: Enable users to create collaborative collections of quotes or playlists.  
+- [ ] **Reading Statistics**: Display data such as the number of quotes viewed, most consulted authors, or favorite topics.  
+- [ ] **Admin Dashboard**: Design a homepage for admins to display all application statistics in a single view.  
+- [ ] **Cloud Backup (AWS)**: Allow users to save their data (favorites, playlists, etc.) to the cloud for access from any device.
+- [ ] **Goodreads Integration**: Sync favorite books and authors with existing literary platforms like Goodreads.  
+- [ ] **Personal Annotations**: Let users add comments or personal notes to quotes or books.  
+
+
+
+
 
 
 ## License
